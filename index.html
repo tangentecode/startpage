@@ -1,43 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Start</title>
-  <style>
-    body {
-      margin: 0;
-      height: 100vh;
-      background-color: #3b4252; 
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-family: sans-serif;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Start Page</title>
+<style>
+  /* Colors */
+  :root {
+    --bg-dark: #10181A;
+    --bg-mid: #151E21;
+    --bg-light: #212A2F;
+    --accent: #353D44;
+    --text: #D2D2D4;
+  }
 
+  /* Reset and basic styles */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+
+  h1 {
+    margin-bottom: 40px;
+    color: var(--accent);
+  }
+
+  .links {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .link-button {
+    background-color: var(--bg-light);
+    color: var(--text);
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    transition: 0.2s;
+    width: 200px;
+    text-align: center;
+  }
+
+  .link-button:hover {
+    background-color: var(--accent);
+    color: var(--bg-dark);
+  }
+
+  @media (min-width: 600px) {
     .links {
-      display: flex;
-      gap: 2rem;
+      flex-direction: row;
     }
-
-    a {
-      color: #d8dee9;
-      text-decoration: none;
-      font-size: 1.5rem;
-      transition: color 0.3s ease;
-    }
-
-    a:hover {
-      color: #88c0d0;
-    }
-  </style>
+  }
+</style>
 </head>
 <body>
+  <h1>Start Page</h1>
   <div class="links">
-    <a href="https://github.com/tangentecode" target="_blank">Github</a>
-    <a href="https://mail.google.com" target="_blank">Gmail</a>
-    <a href="https://drive.google.com" target="_blank">Drive</a>
-    <a href="https://youtube.com" target="_blank">YouTube</a>
-    <a href="https://chat.openai.com" target="_blank">ChatGPT</a>
+    <a href="https://chat.openai.com" target="_blank" class="link-button">ChatGPT</a>
+    <a href="https://open.spotify.com" target="_blank" class="link-button">Spotify</a>
+    <a href="https://mail.google.com" target="_blank" class="link-button">Gmail Inbox</a>
+    <a href="https://www.youtube.com" target="_blank" class="link-button">YouTube</a>
   </div>
 </body>
 </html>
