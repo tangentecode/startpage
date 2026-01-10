@@ -7,10 +7,9 @@
 <style>
   /* Colors */
   :root {
-    --bg-dark: #10181A;
-    --bg-mid: #151E21;
-    --bg-light: #212A2F;
-    --accent: #353D44;
+    --bg: #353D44;       /* Background color */
+    --button-bg: #212A2F; 
+    --button-hover: #151E21;
     --text: #D2D2D4;
   }
 
@@ -23,7 +22,7 @@
 
   body {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    background-color: var(--bg-dark);
+    background-color: var(--bg);
     color: var(--text);
     display: flex;
     flex-direction: column;
@@ -34,7 +33,7 @@
 
   h1 {
     margin-bottom: 40px;
-    color: var(--accent);
+    color: var(--text);
   }
 
   .links {
@@ -44,26 +43,20 @@
   }
 
   .link-button {
-    background-color: var(--bg-light);
+    background-color: var(--button-bg);
     color: var(--text);
     text-decoration: none;
     padding: 15px 30px;
     border-radius: 10px;
     font-size: 1.2rem;
     transition: 0.2s;
-    width: 200px;
+    width: 220px;
     text-align: center;
   }
 
   .link-button:hover {
-    background-color: var(--accent);
-    color: var(--bg-dark);
-  }
-
-  @media (min-width: 600px) {
-    .links {
-      flex-direction: row;
-    }
+    background-color: var(--button-hover);
+    color: var(--text);
   }
 </style>
 </head>
@@ -74,6 +67,8 @@
     <a href="https://open.spotify.com" target="_blank" class="link-button">Spotify</a>
     <a href="https://mail.google.com" target="_blank" class="link-button">Gmail Inbox</a>
     <a href="https://www.youtube.com" target="_blank" class="link-button">YouTube</a>
+    <a href="https://drive.google.com" target="_blank" class="link-button">Google Drive</a>
+    <a href="https://github.com" target="_blank" class="link-button">GitHub</a>
   </div>
 </body>
 </html>
